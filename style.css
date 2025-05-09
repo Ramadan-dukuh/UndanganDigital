@@ -1,0 +1,763 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap');
+
+:root{
+    ---primary-color: #ff5fb0;
+    ---secondary-color: #ff6b81;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f7fe;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+   /* Header Section */
+   header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("wallhaven-m9yvjk_1920x1080.png") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.header-content {
+    z-index: 1;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 1.5rem;                        
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(---primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #ff4757;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    font-size: 2.5rem;
+    color: #ff6b81;
+    margin-bottom: 15px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* Pre-wedding section styling */
+#prewed {
+max-width: 1200px;
+margin: 60px auto;
+padding: 40px 20px;
+display: flex;
+justify-content: center;
+gap: 40px;
+background-color: #fff9f9;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#prewed .profile {
+flex: 1;
+max-width: 45%;
+text-align: center;
+}
+
+#prewed img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid #f5e1e5;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+display: inline-block;
+}
+
+#prewed img:hover {
+transform: scale(1.05);
+}
+
+#prewed .profile-info {
+margin-top: 20px;
+}
+
+#prewed h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+color: #d4656a;
+margin: 10px 0;
+}
+
+#prewed p {
+font-family: 'Montserrat', sans-serif;
+color: #666;
+line-height: 1.6;
+margin-bottom: 10px;
+}
+
+#prewed p.role {
+font-style: italic;
+color: #d4656a;
+font-weight: 500;
+}
+
+/* For mobile screens - stacked layout */
+@media (max-width: 767px) {
+#prewed {
+flex-direction: column;
+align-items: center;
+padding: 30px 20px;
+}
+
+#prewed .profile {
+max-width: 100%;
+margin-bottom: 40px;
+}
+}
+
+/* Adding some decorative elements */
+/* #prewed::before, #prewed::after {
+content: "♥";
+display: block;
+width: 100%;
+text-align: center;
+color: #f5b8bd;
+font-size: 2rem;
+margin: 10px 0;
+}
+ */
+ 
+        .message-section {
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("wallhaven-m9yvjk_1920x1080.png") center/cover no-repeat;
+        }
+
+        
+        .message-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .quotes {
+            position: absolute;
+            font-size: 5rem;
+            color: #ff6b81;
+            opacity: 0.1;
+            font-family: serif;
+        }
+        
+        .quotes.left {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .quotes.right {
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .message-content {
+            text-align: center;
+        }
+        
+        .message-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ff6b81;
+            margin-top: 30px;
+        }
+
+/* countdown */
+.wedding-countdown {
+    text-align: center;    
+    padding: 80px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.countdown-box {
+    width: 70px;
+    height: 70px;
+    background-color: var(---primary-color);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+}
+   /* Memory Gallery Section */
+   .gallery {
+    padding: 80px 20px;
+    background-color: white;
+}
+.memories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+}
+
+.memory-img {
+    height: 230px;
+    overflow: hidden;
+}
+
+.memory-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.memory-card:hover .memory-img img {
+    transform: scale(1.1);
+}
+
+.memory-info {
+    padding: 20px;
+}
+
+.memory-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.memory-info p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.memory-date {
+    font-size: 0.85rem;
+    color: #ff6b81;
+    margin-top: 10px;
+    display: block;
+}
+
+
+ /* Timeline Section */
+ .timeline-section {    
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ff6b81;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #ff6b81;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::after {
+    right: -12px;
+}
+
+.right::after {
+    left: -12px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #ff6b81;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Invitation Section Styling */
+#invitation {
+background-color: #fdf9fb;
+padding: 80px 0;
+position: relative;
+}
+
+#invitation::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 30px;
+background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 C50,40 80,40 100,30 C120,20 150,10 200,30 C250,50 300,20 350,10 C400,0 450,20 500,30 C550,40 600,20 650,10 C700,0 750,20 800,30 C850,40 900,20 950,10 C1000,0 1050,20 1100,30' fill='none' stroke='%23f5e1e5' stroke-width='3'/%3E%3C/svg%3E");
+background-size: contain;
+opacity: 0.7;
+}
+
+#invitation .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.invitation-header {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.invitation-header h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2.5rem;
+color: #d4656a;
+margin-bottom: 20px;
+position: relative;
+display: inline-block;
+}
+
+.invitation-header h2::after {
+content: '';
+display: block;
+width: 80px;
+height: 3px;
+background-color: #f5b8bd;
+margin: 15px auto 0;
+}
+
+.invitation-header .subtitle {
+font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+color: #777;
+max-width: 800px;
+margin: 0 auto;
+line-height: 1.6;
+}
+
+.invitation-details {
+display: flex;
+justify-content: center;
+margin-bottom: 60px;
+}
+
+.event-info {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 60px;
+width: 100%;
+max-width: 900px;
+}
+
+.date-time, .location {
+flex: 1;
+min-width: 300px;
+background-color: #fff;
+border-radius: 12px;
+padding: 30px;
+text-align: center;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+position: relative;
+transition: transform 0.3s ease;
+}
+
+.date-time:hover, .location:hover {
+transform: translateY(-5px);
+}
+
+.date-time i, .location i {
+font-size: 2rem;
+color: #f5b8bd;
+margin-bottom: 15px;
+display: block;
+}
+
+.date-time h3, .location h3 {
+font-family: 'Playfair Display', serif;
+font-size: 1.5rem;
+color: #333;
+margin-bottom: 10px;
+}
+
+.date-time p, .location p {
+font-family: 'Montserrat', sans-serif;
+color: #666;
+line-height: 1.5;
+}
+
+.map-btn {
+display: inline-block;
+margin-top: 15px;
+padding: 8px 20px;
+background-color: #d4656a;
+color: white;
+border-radius: 30px;
+text-decoration: none;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
+transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+background-color: #c55056;
+transform: scale(1.05);
+}
+
+/* Gift Section Styling */
+.gift-section {
+text-align: center;
+padding: 40px 20px;
+background-color: #fff;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+max-width: 900px;
+margin: 0 auto;
+}
+
+.gift-section h3 {
+font-family: 'Playfair Display', serif;
+font-size: 1.8rem;
+color: #d4656a;
+margin-bottom: 15px;
+}
+
+.gift-section > p {
+font-family: 'Montserrat', sans-serif;
+color: #666;
+margin-bottom: 30px;
+line-height: 1.6;
+}
+
+.gift-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+margin-bottom: 30px;
+}
+
+.gift-card {
+flex: 1;
+min-width: 280px;
+max-width: 350px;
+border: 1px solid #f0e0e2;
+border-radius: 12px;
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+.gift-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+background-color: #fdf5f7;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+border-bottom: 1px solid #f0e0e2;
+}
+
+.card-header img {
+width: 40px;
+height: 40px;
+object-fit: contain;
+}
+
+.card-header h4 {
+font-family: 'Montserrat', sans-serif;
+font-size: 1.2rem;
+color: #444;
+margin: 0;
+}
+
+.card-body {
+padding: 25px 20px;
+}
+
+.account-number {
+font-family: 'Courier New', monospace;
+font-size: 1.2rem;
+color: #333;
+letter-spacing: 1px;
+margin-bottom: 10px;
+background-color: #f9f9f9;
+padding: 8px;
+border-radius: 5px;
+}
+
+.account-name {
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+color: #666;
+margin-bottom: 20px;
+}
+
+.copy-btn {
+background-color: #d4656a;
+color: white;
+border: none;
+padding: 8px 20px;
+border-radius: 30px;
+cursor: pointer;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
+transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+background-color: #c55056;
+}
+
+.gift-note {
+font-family: 'Playfair Display', serif;
+font-style: italic;
+color: #888;
+margin-top: 20px;
+}
+
+/* Icons placeholder - replace with actual icons */
+.icon-calendar:before {
+content: "📅";
+}
+
+.icon-location:before {
+content: "📍";
+}
+
+.music-control {
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px;  /* Jarak dari kanan */
+    background: #e85a71;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(232, 90, 113, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 1000; /* Agar berada di atas elemen lain */
+}
+
+.music-control:hover {
+    background: #d04963;
+    transform: translateY(-2px);
+}
+
+.music-control:active {
+    transform: translateY(1px);
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff6b81;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+.invitation-header h2 {
+font-size: 2rem;
+}
+
+.event-info {
+gap: 30px;
+}
+
+.date-time, .location {
+padding: 20px;
+}
+
+.gift-card {
+min-width: 100%;
+}
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 18px;
+    }
+    
+    .left::after, .right::after {
+        left: 18px;
+    }
+    
+    .right {
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    .memory-card {
+        margin-bottom: 20px;
+    }
+    
+    .message-container {
+        padding: 20px;
+    }
+}
