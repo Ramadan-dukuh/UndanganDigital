@@ -45,7 +45,7 @@ Proyek **UndanganDigital** adalah aplikasi berbasis web untuk membuat dan membag
 
 ## 📷 Cuplikan
 
-(Tambahkan screenshot halaman undangan, galeri, dan form buku tamu di sini)
+https://ramadan-dukuh.github.io/UndanganDigital/
 
 ## 🤝 Kontribusi
 
